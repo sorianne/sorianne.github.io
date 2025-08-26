@@ -1,7 +1,7 @@
 
 ---
-# the default layout is 'page'
-icon: fa-regular fa-hippo
+layout: phd_OPA
+icon: fa-refular fa-trophy
 order: 1
 ---
 
