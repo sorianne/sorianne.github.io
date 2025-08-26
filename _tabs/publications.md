@@ -1,4 +1,3 @@
-
 ---
 # the default layout is 'page'
 icon: fa-regular fa-font-awesome
