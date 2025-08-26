@@ -1,4 +1,3 @@
-
 ---
 # layout: phd_OPA
 icon: fa-refular fa-trophy
