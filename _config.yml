@@ -9,14 +9,14 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+timezone:Copenhagen/Denmark
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
 title: Xiaoran's notebook # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: Write everything occured in my life # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -26,20 +26,20 @@ description: >- # used by seo meta and the atom feed
 url: "http://sorianne.github.io"
 
 github:
-  username: github_username # change to your GitHub username
+  username: sorianne # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
+ins:
+  username: xiao_ran_z # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  name: Xiaoran
+  email: juliane_zxr@outlook.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://www.linkedin.com/in/xiaoran-zhu-666a7634a/ # change to your Twitter homepage
+    - https://scholar.google.com/citations?user=-g5eAHAAAAAJ&hl=en&oi=ao # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
