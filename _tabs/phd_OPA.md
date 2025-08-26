@@ -1,6 +1,6 @@
 ---
 # layout: phd_OPA
-icon: far fa-trophy
+icon: fas fa-flask
 order: 1
 ---
 
