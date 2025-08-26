@@ -1,5 +1,5 @@
 ---
-icon: fas fa-face-smile
+icon: fas fa-heart
 order: 2
 ---
 
