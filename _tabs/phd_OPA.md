@@ -5,4 +5,4 @@ order: 1
 ---
 
 
-`_posts/2025-09-01-.md`{: .filepath }
+`_posts/2025-09-01-notes.md`{: .filepath }
