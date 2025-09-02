@@ -9,7 +9,7 @@ math: true
 mermaid: true
 ---
 
-# without Al reflector (Si substrate)
+#### without Al reflector (Si substrate)
 
 - parameters:
    - duty cycle: 0.2
@@ -26,13 +26,13 @@ mermaid: true
    - angle: 10.1229
    - alpha: 0.00191897
  
-# with Al reflector (without Si substrate)
+#### with Al reflector (without Si substrate)
 
 - 在底部去掉Si substrate
 
 - 加上了100nm的Al reflector
 
-## 不改变其他参数的情况下
+##### 不改变其他参数的情况下
 
 <img width="321" height="307" alt="image" src="https://github.com/user-attachments/assets/94884798-d1ff-4aec-ab93-5a3085309ced" align = "middle"/>
 
@@ -40,7 +40,7 @@ T_up = 0.876592
 angle = 52.457
 alpha = 0.001
     
-## 改变其他参数的情况下
+##### 改变其他参数的情况下
 
 - tips：选对模式
 
