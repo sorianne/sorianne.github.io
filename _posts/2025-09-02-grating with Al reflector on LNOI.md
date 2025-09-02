@@ -45,7 +45,9 @@ alpha = 0.001
 - tips：选对模式
 
   TE是平行于单层结构，下图是XY view，在这里指的是Z方向为1的模式
-  <img width="348" height="287" alt="image" src="https://github.com/user-attachments/assets/d71623c0-8b5f-4f6d-a1d4-7d96676ed1a0" /> <img width="558" height="363" alt="image" src="https://github.com/user-attachments/assets/eaa83004-b743-4ad7-b69f-2d50601d4236" />
+  <img width="348" height="287" alt="image" src="https://github.com/user-attachments/assets/d71623c0-8b5f-4f6d-a1d4-7d96676ed1a0" />
+
+  <img width="558" height="363" alt="image" src="https://github.com/user-attachments/assets/eaa83004-b743-4ad7-b69f-2d50601d4236" />
 
   TM是垂直于单层结构，下图是XY view，在这里指的是Y方向为1的模式
   
