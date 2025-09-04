@@ -9,5 +9,5 @@ order: 4
 - [ ] working
       
   + [ ] gds---grating to MMI 64ch
-  + [ ] paper reading and summary it on my website
-  + [ ] danish module2 210/118
+  + [x] paper reading and summary it on my website
+  + [x] danish module2 210/118
