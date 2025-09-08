@@ -35,3 +35,4 @@ from .bend_s import bend_s
 > 我在其中add a folder named zxr
 
 > 并add file `__init__.py`. categories(.py)包括 mmi, s bend, grating等
+{: .prompt-info }
