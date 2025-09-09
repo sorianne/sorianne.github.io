@@ -1,0 +1,401 @@
+deleteall; 
+## taper_in
+n = 100;              
+L = 15e-6;           
+w_start = 1e-6;   
+w_end = 2e-6;      
+z_span = 200e-9;    
+dx = L / n;
+
+# add slab
+addrect;
+set("name","slab");
+set("material","LNOI");
+set("x",0);
+set("x span",500e-6);
+set("y",0);
+set("y span",500e-6);
+set("z",-0.2e-6);
+set("z span",0.2e-6);
+
+addstructuregroup;
+set("name", "taper_in");
+set("x", 0);
+set("y", 0);
+set("z", 0);
+for (i = 1:n) {
+    delta_w = (w_end-w_start)/n;
+
+    addwaveguide;
+    set("name", "wg_taper_" + num2str(i));
+    set("x", 0);
+    set("y", 0);
+    set("z", 0);
+    set("Base Width", w_start+(i-1)*delta_w);
+    set("Base Height",z_span);
+    set("Base Angle",60);
+    pole = [(i-1)*dx,0; i*dx,0];
+    set("poles",pole);
+    
+    set("material", "LNOI");
+    addtogroup("taper_in");
+}
+ 
+## MMI rec
+L_MMI = 17.6e-6;
+W_MMI = 5e-6;
+addwaveguide;
+set("name", "MMI_rec");
+set("base width",W_MMI);
+set("base height",z_span);
+set("base angle",60);
+set("x",L);
+set("y",0);
+set("z",0);
+
+pole = [0,0; L_MMI,0];
+set("poles",pole);
+
+set("material","LNOI");
+
+## taper_out
+addstructuregroup;
+set("name", "taper_out_up");
+set("x", 0);
+set("y", 0);
+set("z", 0);
+w_start_out = 2e-6;   
+w_end_out = 1e-6; 
+gap = 0.64e-6;
+delta_w = (w_end_out-w_start_out)/n;
+
+for (i = 1:n) {   
+    addwaveguide;
+    set("name", "wg_taper_" + num2str(i));
+    set("x", L+L_MMI);
+    set("y", (gap+w_start_out)/2);
+    set("z", 0);
+    set("Base Width", w_start_out+(i-1)*delta_w);
+    set("Base Height",z_span);
+    set("Base Angle",60);
+    pole = [(i-1)*dx,0; i*dx,0];
+    set("poles",pole);
+    
+    set("material", "LNOI");
+    addtogroup("taper_out_up");
+}
+
+addstructuregroup;
+set("name", "taper_out_down");
+set("x", 0);
+set("y", 0);
+set("z", 0);
+for (i = 1:n) {   
+    addwaveguide;
+    set("name", "wg_taper_" + num2str(i));
+    set("x", L+L_MMI);
+    set("y", -(gap+w_start_out)/2);
+    set("z", 0);
+    set("Base Width", w_start_out+(i-1)*delta_w);
+    set("Base Height",z_span);
+    set("Base Angle",60);
+    pole = [(i-1)*dx,0; i*dx,0];
+    set("poles",pole);
+    
+    set("material", "LNOI");
+    addtogroup("taper_out_down");
+}
+
+## input waveguide
+L_in = 30e-6;
+addwaveguide;
+set("name","wg_input");
+
+set("base width",w_start);
+set("base height",z_span);
+set("base angle",60);
+set("x",-L_in);
+set("y",0);
+set("z",0);
+
+pole = [0,0; L_in,0];
+set("poles",pole);
+
+set("material","LNOI");
+
+## output waveguide
+L_in = 30e-6;
+addwaveguide;
+set("name","out_up");
+
+set("base width",w_start);
+set("base height",z_span);
+set("base angle",60);
+set("x",L+L_MMI+L);
+set("y",(gap+w_start_out)/2);
+set("z",0);
+
+pole = [0,0; L_in,0];
+set("poles",pole);
+
+set("material","LNOI");
+
+L_in = 30e-6;
+addwaveguide;
+set("name","out_down");
+
+set("base width",w_start);
+set("base height",z_span);
+set("base angle",60);
+set("x",L+L_MMI+L);
+set("y",-(gap+w_start_out)/2);
+set("z",0);
+
+pole = [0,0; L_in,0];
+set("poles",pole);
+
+set("material","LNOI");
+
+## FDTD
+xx_length = 10e-6;
+xx_width = 3e-6;
+xx_z = 3e-6;
+addfdtd;
+set("dimension",2); # 1 = 2D, 2 = 3D
+set("x min",-xx_length);
+set("x max",L+L_MMI+L+xx_length);
+set("y",0);
+set("y span",W_MMI+xx_width);
+set("z",0);
+set("z span",xx_z);
+set("background material","SiO2 (Glass) - Palik");
+set("simulation time",2e-11);
+set("mesh accuracy",6);
+
+addpower;
+set("name","mon_whole");
+set("monitor type",7); # 2D z-normal
+set("x min",-xx_length);
+set("x max",L+L_MMI+L+xx_length);
+set("y",0);
+set("y span",W_MMI+xx_width);
+set("z",0);
+
+addmode;
+set("name","source1");
+set("injection axis","x");
+set("x",-xx_length+5e-6);
+set("y",0);
+set("y span",5e-6);
+set("z",0);
+set("z span",5e-6);
+set("wavelength start",1.55e-6);
+set("wavelength stop",1.55e-6);
+
+## input monitor
+addpower;
+set("name","mon_input");
+set("monitor type",5); # 2D z-normal
+set("x",-xx_length+6e-6);
+set("y",0);
+set("y span",5e-6);
+set("z",0);
+set("z span",5e-6);
+
+addmodeexpansion;
+set("name","ex_input");
+select("ex_input");
+setexpansion("input", "mon_input");
+if (true) { 
+# select fundamental, fundamental TE or fundamental TM mode 
+set("mode selection","fundamental TE mode");
+} else { 
+set("mode selection","user select"); 
+seteigensolver("use max index",0); 
+seteigensolver("n",1.1); updatemodes(3); 
+}
+set("x",-xx_length+6e-6);
+set("y",0);
+set("y span",5e-6);
+set("z",0);
+set("z span",5e-6);
+
+## output monitor
+addpower;
+set("name","mon_output_up");
+set("monitor type",5); # 2D z-normal
+set("x",L+L_MMI+L+3e-6);
+set("y min",0);
+set("y max",(W_MMI+xx_width)/2);
+set("z",0);
+set("z span",3e-6);
+
+addmodeexpansion;
+set("name","ex_output_up");
+select("ex_output_up");
+setexpansion("input", "mon_output_up");
+if (true) { 
+# select fundamental, fundamental TE or fundamental TM mode 
+set("mode selection","fundamental TE mode");
+} else { 
+set("mode selection","user select"); 
+seteigensolver("use max index",0); 
+seteigensolver("n",1.1); updatemodes(3); 
+}
+set("x",L+L_MMI+L+3e-6);
+set("y min",0);
+set("y max",(W_MMI+xx_width)/2);
+set("z",0);
+set("z span",3e-6);
+
+addpower;
+set("name","mon_output_down");
+set("monitor type",5); # 2D z-normal
+set("x",L+L_MMI+L+2e-6);
+set("y min",-(W_MMI+xx_width)/2);
+set("y max",0);
+set("z",0);
+set("z span",3e-6);
+
+addmodeexpansion;
+set("name","ex_output_down");
+select("ex_output_down");
+setexpansion("input", "mon_output_down");
+if (true) { 
+# select fundamental, fundamental TE or fundamental TM mode 
+set("mode selection","fundamental TE mode");
+} else { 
+set("mode selection","user select"); 
+seteigensolver("use max index",0); 
+seteigensolver("n",1.1); updatemodes(3); 
+}
+set("x",L+L_MMI+L+2e-6);
+set("y min",-(W_MMI+xx_width)/2);
+set("y max",0);
+set("z",0);
+set("z span",3e-6);
+run;
+
+##############################################################
+T_result = getresult("ex_output_up", "expansion for input.T_net");
+T_abs = abs(T_result.T_net);
+
+### length optimization
+#start_L_MMI = 17e-6;
+#stop_L_MMI = 19e-6;
+#step_L_MMI = 0.1e-6;
+#iterator = (stop_L_MMI-start_L_MMI)/step_L_MMI;
+#L_MMI_list = linspace(start_L_MMI,stop_L_MMI,iterator + 1);
+
+#result1 = zeros(1, iterator2 + 1); 
+
+#switchtolayout;
+
+#for(i=1;i<=iterator2+1;i=i+1)
+#{
+#?i;
+#switchtolayout;
+
+#L_MMI = L_MMI_list(j);
+#select("MMI_rec");
+#pole = [0,0; L_MMI,0];
+#set("poles",pole);
+
+#select("taper_out_up");
+#set("x",(j-1)*step_L_MMI);
+
+#select("taper_out_down");
+#set("x",(j-1)*step_L_MMI);
+
+#select("out_up");
+#set("x",L+L_MMI+L);
+ 
+#select("out_down");
+#set("x",L+L_MMI+L); 
+
+#select("FDTD");
+#set("x max",L+L_MMI+L+xx_length);
+
+#select("mon_whole");
+#set("x max",L+L_MMI+L+xx_length);
+
+#select("mon_output_up");
+#set("x",L+L_MMI+L+3e-6);
+
+#select("ex_output_up");
+#set("x",L+L_MMI+L+3e-6);
+
+#select("mon_output_down"); 
+#set("x",L+L_MMI+L+2e-6);
+
+#select("ex_output_down"); 
+#set("x",L+L_MMI+L+2e-6);
+
+#run;
+
+#T_result = getresult("ex_output_up", "expansion for input.T_net");
+#T_net1 = abs(T_result.T_net);
+#result1(1,i) = T_net1;
+#}
+
+##T_max = max(T_net1);
+##idx = find(T_net1 == T_max);
+##L_best = L_MMI(idx);
+
+##?("Best T = " + num2str(T_max) + " at L = " + num2str(L_best*1e6) + " um");
+#filename=num2str(W_MMI*1e9)+"nm_LNOI_L_sweep(crosstalk)"; # set filename
+#matlabsave(filename,L_MMI_list,result1); 
+
+## width optimization
+start_W_MMI = 4.7e-6;
+stop_W_MMI = 5.5e-6;
+step_W_MMI = 0.1e-6;
+iterator = (stop_W_MMI-start_W_MMI)/step_W_MMI;
+W_MMI_list = linspace(start_W_MMI,stop_W_MMI,iterator + 1);
+
+result1 = zeros(1, iterator + 1); 
+
+switchtolayout;
+
+for(i=1;i<=iterator+1;i=i+1)
+{
+?i;
+switchtolayout;
+
+W_MMI = W_MMI_list(i);
+select("MMI_rec");
+set("base width",W_MMI);
+
+select("FDTD");
+set("y span",W_MMI+xx_width);
+
+select("mon_whole");
+set("y span",W_MMI+xx_width);
+
+select("ex_output_up"); 
+set("y max",(W_MMI+xx_width)/2);
+
+select("mon_output_up");
+set("y max",(W_MMI+xx_width)/2);
+
+select("ex_output_down"); 
+set("y min",-(W_MMI+xx_width)/2);
+
+select("mon_output_down");
+set("y min",-(W_MMI+xx_width)/2);
+
+run;
+
+T_result = getresult("ex_output_up", "expansion for input.T_net");
+T_net1 = abs(T_result.T_net);
+result1(1,i) = T_net1;
+}
+
+#T_max = max(T_net1);
+#idx = find(T_net1 == T_max);
+#L_best = L_MMI(idx);
+
+#?("Best T = " + num2str(T_max) + " at L = " + num2str(L_best*1e6) + " um");
+filename=num2str(L_MMI*1e9)+"nm_LNOI_W_sweep"; # set filename
+matlabsave(filename,W_MMI_list,result1); 
+
