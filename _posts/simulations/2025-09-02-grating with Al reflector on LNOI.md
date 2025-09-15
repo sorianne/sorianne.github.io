@@ -51,4 +51,8 @@ alpha = 0.001
   <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/eaa83004-b743-4ad7-b69f-2d50601d4236" />
 
   TM是垂直于单层结构，下图是XY view，在这里指的是Y方向为1的模式
+
+#####  性能表征
+
+需要与不加Al镜比较  仿真图纵坐标把log换成T_up
   
