@@ -16,6 +16,7 @@ order: 7
   某人说好吃
 
   <img width="200" height="112" alt="image" src="https://github.com/user-attachments/assets/3b40dd6b-87e9-4c44-b40e-39058193afd9" />
+
   还做了西兰花炒肉和肉末豆角，发挥稳定
 
 - 这周末有Oslo的游船，不然可以做香香猪蹄和鸡爪
