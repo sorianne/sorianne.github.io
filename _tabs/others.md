@@ -8,6 +8,31 @@ order: 7
 {: .prompt-tip }
 
 
+## 22/09/2025
+
+- 感冒可以算终于好了，嗓子不疼的感觉真好（虽然还有一点点痰）
+  
+- 周末的晚上做了十几个司康，这一周的早饭就有了，第一次烤，烤了两个口味，一个是黄油蔓越莓，另一个是抹茶蔓越莓
+  某人说好吃[Doge] <img width="200" height="112" alt="image" src="https://github.com/user-attachments/assets/3b40dd6b-87e9-4c44-b40e-39058193afd9" />
+  还做了西兰花炒肉和肉末豆角，发挥稳定
+
+- 这周末有Oslo的游船，不然可以做香香猪蹄和鸡爪
+
+- 好消息，转运的东西马上就要到了，我翘首以盼啊它可算到了
+
+  相当于耗时一个半月吧，8月11号出发的，铁路速度也还可以，把这次转运的详情贴在下边
+
+  <img width="1025" height="2080" alt="image" src="https://github.com/user-attachments/assets/56377deb-c1c9-4b75-9ef0-e725a545ae28" />
+  <img width="955" height="1975" alt="image" src="https://github.com/user-attachments/assets/9844fabe-c654-4654-a864-f5dd56373f1c" />
+  <img width="955" height="1975" alt="image" src="https://github.com/user-attachments/assets/398aca78-126f-4a1f-b840-09fe4f321da0" />
+
+- 今天的计划是看两篇文献，目前一篇已经看完了，是会议论文，9月份刚刚publish的，另一篇看yong放在arxiv上的吧，晚上给董哥剪头发和做丹麦语的作业
+
+- 哦对，今天chandra给我说invitation发不了，审查真是有点严格啊，这可恶的potential risk（可恶可恶可恶）
+
+- 一天又快过完了  fine ：》
+
+
 ## 18/09/2025
 
 - 终于把group meeting体面度过了，阳哥不愧是阳哥，ppt全英讲半个小时都不带累的，真是太牛了，向他看齐，台风真的很稳，也不紧张。根本不像我个小菜鸡，一紧张就嗖嗖嗖全瞎说
