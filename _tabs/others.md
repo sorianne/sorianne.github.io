@@ -13,7 +13,9 @@ order: 7
 - 感冒可以算终于好了，嗓子不疼的感觉真好（虽然还有一点点痰）
   
 - 周末的晚上做了十几个司康，这一周的早饭就有了，第一次烤，烤了两个口味，一个是黄油蔓越莓，另一个是抹茶蔓越莓
-  某人说好吃[Doge] <img width="200" height="112" alt="image" src="https://github.com/user-attachments/assets/3b40dd6b-87e9-4c44-b40e-39058193afd9" />
+  某人说好吃
+
+  <img width="200" height="112" alt="image" src="https://github.com/user-attachments/assets/3b40dd6b-87e9-4c44-b40e-39058193afd9" />
   还做了西兰花炒肉和肉末豆角，发挥稳定
 
 - 这周末有Oslo的游船，不然可以做香香猪蹄和鸡爪
