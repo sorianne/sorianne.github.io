@@ -10,6 +10,7 @@ order: 7
 ## 23/09/2025
 
 - 一大早上就开始道歉，不熟悉的丹麦语非要我硬憋出一个小论文，这也太为难人了吧，而且我手边连本字典都没有
+
   <img width="534" height="198" alt="image" src="https://github.com/user-attachments/assets/18a22383-79e8-4e7b-9eca-b40ec671e173" />
 
 - 转运终于快要到了，它离我越来越近了
