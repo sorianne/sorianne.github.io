@@ -7,8 +7,8 @@ order: 7
 > Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
 {: .prompt-tip }
 
-## 23/09/2025
-
+### 23/09/2025
+--------------
 - 一大早上就开始道歉，不熟悉的丹麦语非要我硬憋出一个小论文，这也太为难人了吧，而且我手边连本字典都没有
 
   <img width="534" height="198" alt="image" src="https://github.com/user-attachments/assets/18a22383-79e8-4e7b-9eca-b40ec671e173" />
@@ -17,8 +17,8 @@ order: 7
 
 - 下午去看qingjie做ebeam，然后周五去自己做一次
 
-## 22/09/2025
-
+### 22/09/2025
+--------------
 - 感冒可以算终于好了，嗓子不疼的感觉真好（虽然还有一点点痰）
   
 - 周末的晚上做了十几个司康，这一周的早饭就有了，第一次烤，烤了两个口味，一个是黄油蔓越莓，另一个是抹茶蔓越莓
