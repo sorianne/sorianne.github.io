@@ -35,9 +35,9 @@ order: 7
   相当于耗时一个半月吧，8月11号出发的，铁路速度也还可以，把这次转运的详情贴在下边
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-  <img width="250" height="500" alt="image" src="https://github.com/user-attachments/assets/56377deb-c1c9-4b75-9ef0-e725a545ae28" />{: width="30%"}
-  <img width="250" height="500" alt="image" src="https://github.com/user-attachments/assets/9844fabe-c654-4654-a864-f5dd56373f1c" />{: width="30%"}
-  <img width="250" height="500" alt="image" src="https://github.com/user-attachments/assets/398aca78-126f-4a1f-b840-09fe4f321da0" />{: width="30%"}
+  <img width="250" height="500" alt="image" src="https://github.com/user-attachments/assets/56377deb-c1c9-4b75-9ef0-e725a545ae28" />
+  <img width="250" height="500" alt="image" src="https://github.com/user-attachments/assets/9844fabe-c654-4654-a864-f5dd56373f1c" />
+  <img width="250" height="500" alt="image" src="https://github.com/user-attachments/assets/398aca78-126f-4a1f-b840-09fe4f321da0" />
 </div>
 
 - 今天的计划是看两篇文献，目前一篇已经看完了，是会议论文，9月份刚刚publish的，另一篇看yong放在arxiv上的吧，晚上给董哥剪头发和做丹麦语的作业
