@@ -10,6 +10,12 @@ mermaid: true
 > Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
 {: .prompt-tip }
 
+## 25/09/2025
+--------------
+- 转运的太多也会令人感到苦恼，比如说，买了32包板面，发愁这应该怎么吃ing
+
+- 今天的计划是   把版图修改完连上，然后问问qj准备一下明天的ebeam（是否需要beamer）
+
 ## 24/09/2025
 -------------
 - 今天好开心，一个是因为我的转运终于到了，看着满满两大箱零食，我的喜悦之情溢于言表，这种感觉就像村子里发饥荒，突然有人空投下一袋粮食，一模一样
